@@ -1,0 +1,13 @@
+{{ form_start(form) }}
+
+    {% for field in form %}
+        {% if field.vars.name == 'name' %}
+        
+            {{ form_row(field, {'attr': {'class': 'form-control'}}) }}
+
+        {% endif %}
+    {% endfor %}
+
+    <button class="mt-3 btn btn-secondary">{{ button_label|default('Cadastrar') }}</button>
+
+{{ form_end(form) }}

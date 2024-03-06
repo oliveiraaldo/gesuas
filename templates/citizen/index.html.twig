@@ -1,0 +1,60 @@
+{# templates/citizen/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Citizen index{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-5 my-5">
+            
+            <form method="get" action="{{ path('app_citizen_index') }}" class="d-flex" role="search">
+                <input type="text" id="nis" name="nis" class="form-control" placeholder="Digite o NIS" aria-label="Search">
+
+                <button class="btn btn-outline-secondary" type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row">
+        {% if message %}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endif %} 
+        {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    </div>
+
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>NIS</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for citizen in citizens %}
+                <tr>
+                    <td>{{ citizen.name }}</td>
+                    <td>{{ citizen.nis }}</td>
+                    <td>
+                        {{ include('citizen/_delete_form.html.twig') }}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

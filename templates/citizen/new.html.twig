@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}app_citizen_index{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-6">
+
+            <h2 class="my-5 text-secondary">Cadastro de Cidadão</h2>
+
+            {{ include('citizen/_form.html.twig') }}        
+        </div>
+    </div>
+{% endblock %}
