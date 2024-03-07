@@ -37,6 +37,20 @@ Este projeto utiliza Docker para facilitar a configuração do ambiente de desen
 docker-compose -f compose.yaml up -d
 ```
 
+### Executar as Migrations
+
+```bash
+php bin/console doctrine:database:create
+```
+
+```bash
+php bin/console make:migration
+```
+
+```bash
+php bin/console doctrine:migrations:migrate
+```
+
 Este comando iniciará os contêineres Docker necessários para a aplicação, como o servidor web e o banco de dados.
 
 ### Acessar a Aplicação
