@@ -8,9 +8,13 @@ Siga as instruções abaixo para clonar, configurar e executar a aplicação em 
 
 ### Pré-requisitos
 
-- Docker instalado em seu sistema ([Instalação do Docker](https://docs.docker.com/get-docker/))
-- Git instalado em seu sistema ([Instalação do Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git))
-- Composer instalado em seu sistema ([Instalação do Composer](https://getcomposer.org/download/))
+- Docker instalado em seu sistema ([Instalação do Docker](https://docs.docker.com/get-docker/)) ;
+- Git instalado em seu sistema ([Instalação do Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)) ;
+- Composer instalado em seu sistema ([Instalação do Composer](https://getcomposer.org/download/)) ;
+- **PHP**: Versão 8.2 ou superior;
+- **Extensões do PHP**: 
+  - PDO SQLite;
+  - Outras extensões necessárias (se aplicável);
 
 ### Clonar o Repositório
 
